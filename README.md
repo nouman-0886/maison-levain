@@ -17,38 +17,11 @@ Then open `http://localhost:8000`. You can also use VS Code Live Server.
 - `contact.html` — opening status, validated contact form, WhatsApp handoff and map embed
 - `404.html` — branded not-found page
 
-## Replace before showing to a real client
-Search the project for `FICTIONAL`, `example.com`, `0000000`, `Maison Levain`, and `Bahawalpur`. Replace:
-1. Brand name, logo mark, tagline and copy.
-2. Business type, city, neighbourhood, country and full verified address.
-3. All product names, descriptions, prices and categories in `js/data.js`.
-4. Phone and WhatsApp number in `js/data.js`, `js/app.js`, footer and contact page. WhatsApp number must be digits only with country code.
-5. Email address, opening hours, map query and map iframe.
-6. Canonical URLs, Open Graph URLs, JSON-LD, sitemap and robots host.
-7. All fictional story claims and sample dietary information. Do not publish ingredient/allergen or dietary claims without verification.
-
 ### Opening hours
 The demo badge uses Pakistan Standard Time (UTC+5) and sample hours Tuesday–Sunday 08:00–20:00, Monday closed. Update `setupOpenBadge()` in `js/app.js` and the visible schedule in `contact.html` together.
 
 ### WhatsApp behaviour
 The cart and contact form open a pre-filled WhatsApp message. The visitor still presses Send in WhatsApp. No order is transmitted or stored by a server. This is not payment processing, stock management or a live POS integration.
-
-## Images to replace
-All artwork currently ships as local SVG illustration placeholders (no external image CDN). Replace each SVG with your own licensed image using the same filename, or update the relevant `src` in the HTML / `js/data.js`. Recommended replacement: JPG/WebP, landscape 1400×1100 for cards, portrait 1200×1500 for editorial images, hero 1800×1400. Keep descriptive alt text and explicit width/height.
-
-- `images/hero-croissant.svg` — hero pastry image
-- `images/baker-hands.svg` — hands shaping dough
-- `images/bakery-interior.svg` — bakery interior
-- `images/butter-croissant.svg` — butter croissant
-- `images/pain-au-chocolat.svg` — pain au chocolat
-- `images/almond-danish.svg` — almond danish
-- `images/sourdough-loaf.svg` — sourdough loaf
-- `images/milk-bread.svg` — milk bread
-- `images/focaccia.svg` — focaccia
-- `images/cinnamon-roll.svg` — cinnamon roll
-- `images/lemon-tart.svg` — lemon tart
-- `images/brownie.svg` — brownie
-- `images/favicon.svg` — favicon (replace with your own mark)
 
 ## Design / implementation notes
 - No CDN, remote font dependency or third-party runtime dependency is required. The design uses system fonts to remain self-contained and work offline.
